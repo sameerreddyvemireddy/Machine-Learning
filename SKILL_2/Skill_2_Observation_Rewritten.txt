@@ -1,0 +1,11 @@
+OBSERVATION — SKILL 2
+Data Preprocessing of the One Piece Bounty Dataset
+
+The original dataset contains 165 records and 3 columns. During preprocessing, the column headers were standardized, bounty strings were converted into numeric Berry values where available, and the currency symbol inconsistency in one record was corrected. No duplicate character names were removed, and no names required text cleanup.
+
+A total of 145 records have known numeric bounties, while 20 records remain unknown. These unknown values were marked as missing instead of being estimated. The placeholder rank value 999 was removed for the unknown entries, and ranks were rebuilt from the bounty values. Additional features were created to represent bounty in billions and on a log10 scale.
+
+The raw bounty values were strongly right-skewed, with skewness 4.28. On the log10 scale, the skewness was -2.44 because Bepo and Tony Tony Chopper were flagged as unusually small values. When these two flagged records are excluded from the skewness calculation, the log-scale skewness is approximately 0.03. The two records were flagged, not deleted.
+
+RESULT / CONCLUSION
+The preprocessing pipeline produced a standardized dataset with explicit handling of unknown bounties, corrected currency formatting, rebuilt ranks, scaled features, and outlier flags. The cleaned data is prepared for further analysis and feature engineering. The report records 165 rows throughout the pipeline, with 145 known bounties and 20 unknown values retained without imputation.

@@ -1,0 +1,9 @@
+OBSERVATION — SKILL 1
+Exploratory Data Analysis of the Titanic Dataset
+
+The Titanic dataset was explored using data inspection and visualization techniques. The supplied dataset contains 1,309 passenger records. The analysis considered passenger age, fare, sex, family details, passenger class, embarkation point, and survival status.
+
+The survival charts show that survival percentages differ by sex and passenger class. The lifecycle summary gives survival rates of 42.55% for children, 29.77% for teenagers, 23.62% for young adults, 26.95% for adults, and 17.50% for seniors. The correlation heatmap shows a positive correlation of approximately 0.40 between the encoded Sex field and Survived, and a negative correlation of approximately -0.24 between Pclass and Survived. These values indicate associations in this dataset and should not be interpreted as proof of causation.
+
+RESULT / CONCLUSION
+The experiment demonstrates how Exploratory Data Analysis can be used to inspect a dataset, visualize missing-value patterns, compare survival across groups, and examine correlations. In the supplied report, children have the highest lifecycle survival rate and seniors have the lowest. The visualizations summarize patterns that can guide further analysis.

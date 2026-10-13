@@ -1,0 +1,7 @@
+Observation – Skill 4: Linear Regression and Regularisation
+
+In this experiment, I used the One Piece bounty dataset to study linear regression and regularisation techniques. The target variable was converted to log10 bounty, and the model used rank and name-related features. After setting aside entries with unknown bounties and excluding the specified outliers and yen-denominated bounty, 142 rows were used.
+
+Polynomial features of degree 2 were selected through cross-validation. I compared OLS, Ridge, Lasso and ElasticNet. OLS performed well on training data but its test score dropped, indicating overfitting. Regularised models improved generalisation. ElasticNet gave a test R² of 0.956 and a test RMSE of 0.140 in log10 units, with seven non-zero coefficients. Lasso achieved a similar test score and also retained seven coefficients, while Ridge reduced coefficient sizes without setting them exactly to zero.
+
+The ablation results showed that rank was much more predictive than name-only clues. However, rank is derived from bounty ordering, so it can leak information about the target and should not be treated as an independent real-world predictor. The residual plots and model-comparison charts helped assess prediction quality and model behaviour. Overall, regularisation controlled the polynomial model's complexity, but the rank leakage is an important limitation when interpreting the results.

@@ -1,0 +1,17 @@
+Skill 5 — Logistic Regression Classification
+
+Aim: To explore One Piece bounty records, construct name-based features, and study a Logistic Regression classifier that predicts whether a character belongs to the high-bounty group.
+
+Procedure:
+1. Load the supplied bounty dataset and inspect the fields and missing or non-numeric bounty entries.
+2. Convert bounty strings to numeric values where possible and retain usable Berry records for analysis.
+3. Create name-based features such as name length, word count, uppercase count, vowel ratio, initials, and title indicators.
+4. Use the project’s documented threshold of 332,500,000 Berries to define the high-bounty class.
+5. Review the supplied StandardScaler + LogisticRegression model results, cross-validation summary, and out-of-fold predictions.
+6. Visualize the bounty distribution, class balance, feature correlations, and reported classification metrics.
+
+Observation: The supplied reports describe 165 raw records and 144 usable Berry records. The 75th-percentile dividing line is 332,500,000 Berries, resulting in 108 standard-bounty and 36 high-bounty records in the documented analysis. The bounty distribution is strongly right-skewed, and the classes are imbalanced. The report gives held-out accuracy of 0.7241 and ROC AUC of 0.6364. Cross-validation and out-of-fold results should be considered alongside the single test split; name-derived correlations are exploratory signals and do not establish causation.
+
+Conclusion: Logistic Regression provides a baseline probability-based classifier for this dataset. The evaluation suggests that performance is moderate and that recall/precision for the high-bounty class require attention. Threshold choice affects the precision-recall trade-off, so the threshold should be selected using validation data rather than the test set.
+
+Reproducibility note: Figures marked as recreated are generated from the uploaded CSV. The model metrics figure uses values copied from the supplied Skill5_Final_Report.txt. The original notebook and saved model are preserved separately.
